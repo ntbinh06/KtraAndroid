@@ -1,19 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
 
+        <ImageButton
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/baseline_close_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="130dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kebab_menu"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="20dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello!Bình"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You've got 5 tasks today"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_marginLeft="25dp"/>
+    </LinearLayout>
+    <EditText
+
+        android:id="@+id/searchEditText"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@drawable/frame"
+        android:backgroundTint="@color/gray1"
+        android:text="Search some thing"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:drawableEnd="@drawable/ic_search" />
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/bgtask"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello!Bình"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You've got 5 tasks today"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="25dp"/>
+
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="28dp"
+        android:text="MY TASK"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:tabIndicatorColor="@color/black"
+        app:tabSelectedTextColor="@color/black">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabthunhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recently"
+            android:textStyle="bold" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabchiphi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:textStyle="bold" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/upcoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming"
+            android:textStyle="bold" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Later"
+            android:textStyle="bold" />
+    </com.google.android.material.tabs.TabLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp">
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/bgtask"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do homework"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 5 excercises"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress  40%"
+            android:textColor="@color/gray2"
+            android:textSize="20sp"
+            android:layout_marginLeft="25dp"/>
+        <ProgressBar
+            android:id="@+id/pgbTienTrinh"
+            android:layout_width="120dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="8dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar"
+            android:max="100"
+            android:progress="50"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/bgtask"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cooking"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 2 excercises"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress  15%"
+            android:textColor="@color/gray2"
+            android:textSize="20sp"
+            android:layout_marginLeft="25dp"/>
+        <ProgressBar
+            android:id="@+id/pgbTienTrinh2"
+            android:layout_width="120dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="8dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar"
+            android:max="100"
+            android:progress="50"/>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>
